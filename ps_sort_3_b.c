@@ -61,10 +61,8 @@ void	ps_sort_top_3_b(t_stack **stack_a, t_stack **stack_b)
 void	ps_push_bottom_3_b(t_stack **stack_a, t_stack **stack_b)
 {
 	int	i;
-	int	j;
 
 	i = -1;
-	j = -1;
 	while (++i < 3)
 		rrb(stack_b, 1);
 	ps_sort_top_3_b(stack_a, stack_b);

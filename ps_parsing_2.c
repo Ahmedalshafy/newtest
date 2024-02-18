@@ -42,8 +42,6 @@ char	**ps_parsing(int ac, char *av[])
 	if (!args)
 		return (free(str), NULL);
 	free(str);
-	if (ps_check_dup(args) == 0)
-		return (free_array(args), NULL);
 	return (args);
 }
 

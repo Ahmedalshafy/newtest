@@ -41,11 +41,9 @@ void	ps_rot_b_size(t_stack **stack_a, t_stack **stack_b, int min_value,
 {
 	t_stack	*tmp;
 	int		count_pa;
-	int		i;
-
+	
 	count_pa = 0;
 	tmp = *stack_b;
-	i = -1;
 	while (tmp && count_pa < size)
 	{
 		if (tmp->num >= min_value)
@@ -63,10 +61,8 @@ void	ps_rev_rot_b(t_stack **stack_a, t_stack **stack_b, int min_value,
 		int size)
 {
 	t_stack	*tmp;
-	int		count_pa;
 	int		i;
 
-	count_pa = 0;
 	tmp = *stack_b;
 	i = -1;
 	while (tmp && ++i < size)

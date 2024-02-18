@@ -71,10 +71,8 @@ void	ps_rev_rot_a(t_stack **stack_a, t_stack **stack_b, int min_value,
 		int size)
 {
 	t_stack	*tmp;
-	int		count_pb;
 	int		i;
 
-	count_pb = 0;
 	tmp = *stack_a;
 	i = -1;
 	if (stack_len(*stack_a) > size)

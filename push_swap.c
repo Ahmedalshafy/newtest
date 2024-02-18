@@ -26,6 +26,11 @@ int	main(int ac, char *av[])
 	free_array(args);
 	if (!stack_a)
 		exit_error();
+	if (ps_check_dup(stack_a) == 0)
+	{
+		ps_free_stack(stack_a);
+		exit_error();
+	}
 	if (ps_is_sorted(stack_a))
 		return (ps_free_stack(stack_a), 0);
 	if (stack_len(stack_a) == 2)

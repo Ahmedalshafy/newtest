@@ -60,21 +60,21 @@ int	ps_validate(char *str)
 	return (1);
 }
 
-int	ps_check_dup(char **arr)
-{
-	int	i;
-	int	j;
+// int	ps_check_dup(char **arr)
+// {
+// 	int	i;
+// 	int	j;
 
-	i = -1;
-	while (arr[++i])
-	{
-		j = i;
-		while (arr[++j])
-			if (ft_strcmp(arr[i], arr[j]) == 0)
-				return (0);
-	}
-	return (1);
-}
+// 	i = -1;
+// 	while (arr[++i])
+// 	{
+// 		j = i;
+// 		while (arr[++j])
+// 			if (ft_strcmp(arr[i], arr[j]) == 0)
+// 				return (0);
+// 	}
+// 	return (1);
+// }
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -91,3 +91,24 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+int ps_check_dup(t_stack *stack)
+{
+	t_stack	*tmp;
+	t_stack	*tmp2;
+
+	tmp = stack;
+	while (tmp)
+	{
+		tmp2 = tmp->next;
+		while (tmp2)
+		{
+			if (tmp->num == tmp2->num)
+				return (0);
+			tmp2 = tmp2->next;
+		}
+		tmp = tmp->next;
+	}
+	return (1);
+}
+	

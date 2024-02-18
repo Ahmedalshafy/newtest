@@ -14,9 +14,6 @@
 
 void	ps_sort_4_a(t_stack **stack_a, t_stack **stack_b)
 {
-	int		i;
-
-	i = -1;
 	if ((*stack_a)->num > (*stack_a)->next->num)
 		sa(stack_a, 1);
 	pb(stack_a, stack_b, 1);
