@@ -43,7 +43,6 @@ int	ps_validate(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		printf("str[%d] = %c\n", i, str[i]);
 		if (!ft_isdigit(str[i]) && str[i] != '-' && str[i] != '+'
 			&& str[i] != ' ')
 			return (0);
@@ -58,7 +57,6 @@ int	ps_validate(char *str)
 			&& str[i + 1] != '+')
 			return (0);
 	}
-	// printf("str[%d] = %c\n", i, str[i]);
 	return (1);
 }
 
@@ -82,7 +80,6 @@ int ps_check_dup(t_stack *stack)
 	return (1);
 }
 
-// fix the copinying increment of join and dup
 
 char	*ps_strjoin(char *s1, char *s2)
 {
@@ -100,23 +97,24 @@ char	*ps_strjoin(char *s1, char *s2)
 	if (new == 0)
 		return (NULL);
 	i = -1;
+	j = -1;
 	while (s1[++i] != 0)
 	{
 		if (s1[i] == ' ' && (s1[i + 1] == ' ' || s1[i + 1] == '\0'))
 			continue;
 		else
-			new[i] = s1[i];
+			new[++j] = s1[i];
 	}
-	new[i++] = ' ';
-	j = -1;
-	while (s2[++j] != 0)
+	new[++j] = ' ';
+	i = -1;
+	while (s2[++i] != 0)
 	{
-		if (s2[j] == ' ' && (s2[j + 1] == ' ' || s2[j + 1] == '\0'))
+		if (s2[i] == ' ' && (s2[i + 1] == ' ' || s2[i + 1] == '\0'))
 			continue;
 		else
-			new[i++] = s2[j];
+			new[++j] = s2[i];
 	}
-	new[i] = '\0';
+	new[++j] = '\0';
 	free(s1);
 	return (new);
 }
@@ -151,18 +149,17 @@ char	*ps_strdup(char *src)
 	if (!dest)
 		return (NULL);
 	i = -1;
+	j = -1;
 	while (src[++i])
 	{
 		if (src[i] == ' ' && (src[i + 1] == ' ' || src[i + 1] == '\0'))
 			continue;
 		else
 		{
-			dest[i] = src[i];
+			dest[++j] = src[i];
 		}	
 	}
-	dest[i] = '\0';
-	printf("dest = %s\n", dest);
-	printf("len = %d\n", ps_strlen(dest));
+	dest[++j] = '\0';
 	return (dest);
 }
 
