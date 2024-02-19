@@ -45,8 +45,6 @@ static char	*ex_words(char const *s, char *new, char c, int *i)
 	while (s[*i] != 0)
 	{
 		j = 0;
-		printf("s[*i]: %c\n", s[*i]);
-		printf("i: %d\n", *i);
 		while (s[*i] != c && s[*i] != 0)
 		{
 			j++;
@@ -60,7 +58,6 @@ static char	*ex_words(char const *s, char *new, char c, int *i)
 		else
 			(*i)++;
 	}
-	printf("new: %s\n", new);
 	return (new);
 }
 
@@ -75,29 +72,21 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	ind = 0;
-	printf("count_words: %d\n", count_words(s, c));
 	while (s[i] != 0)
 	{
-		printf("ind: %d\n", ind);
 		ary[ind] = ex_words(s, ary[ind], c, &i);
 		if (ary[ind] != NULL && ind < count_words(s, c))
 		{
-			printf("ary[ind]: %s\n", ary[ind]);
 			ind++;
 		}
 		else if (ary[ind] == NULL && ind < count_words(s, c))
 		{
-			printf("ind: %d\n", ind);
-			printf("ary[ind]: %s\n", ary[ind]);
 			while (--ind >= 0)
 				free(ary[ind]);
 			free(ary);
 			return (NULL);
 		}
-		printf("i: %d\n", i);
 	}
-	printf("ind: %d\n", ind);
 	ary[ind] = 0;
-	printf("ind: %d\n", ind);
 	return (ary);
 }

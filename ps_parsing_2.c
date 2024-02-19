@@ -50,6 +50,8 @@ int	ps_check_0(char *str)
 	int	i;
 
 	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
 	while (str[i] != '\0' && str[i] == '0')
 	{
 		if (str[i + 1] == '\0')
