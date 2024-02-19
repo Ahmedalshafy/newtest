@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalshafy <aalshafy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:59:06 by aalshafy          #+#    #+#             */
-/*   Updated: 2023/11/12 14:34:16 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:17:12 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ static char	*ex_words(char const *s, char *new, char c, int *i)
 {
 	int		j;
 
-	
 	while (s[*i] != 0)
 	{
 		j = 0;
@@ -76,9 +75,7 @@ char	**ft_split(char const *s, char c)
 	{
 		ary[ind] = ex_words(s, ary[ind], c, &i);
 		if (ary[ind] != NULL && ind < count_words(s, c))
-		{
 			ind++;
-		}
 		else if (ary[ind] == NULL && ind < count_words(s, c))
 		{
 			while (--ind >= 0)

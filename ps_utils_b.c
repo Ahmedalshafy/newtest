@@ -6,7 +6,7 @@
 /*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 08:42:08 by aalshafy          #+#    #+#             */
-/*   Updated: 2024/02/07 15:13:16 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:15:10 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ps_rot_b_size(t_stack **stack_a, t_stack **stack_b, int min_value,
 {
 	t_stack	*tmp;
 	int		count_pa;
-	
+
 	count_pa = 0;
 	tmp = *stack_b;
 	while (tmp && count_pa < size)

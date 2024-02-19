@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalshafy <aalshafy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:29:03 by aalshafy          #+#    #+#             */
-/*   Updated: 2023/11/10 12:56:29 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:17:23 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strdup(const char *src)
 		{
 			dest[i] = src[i];
 			i++;
-		}	
+		}
 	}
 	dest[i] = '\0';
 	return (dest);

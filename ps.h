@@ -6,7 +6,7 @@
 /*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:48:35 by aalshafy          #+#    #+#             */
-/*   Updated: 2024/02/18 17:19:34 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:42:29 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char				*ps_join(int ac, char *av[]);
 int					ps_strlen(char *str);
 char				*ps_strdup(char *src);
 char				*ps_strjoin(char *s1, char *s2);
+void				*ps_cpy_char(char s1, char s2, char *dest, int j);
 int					ps_validate(char *str);
 t_stack				*ps_stack(char **av);
 t_stack				*ps_stack_first(char *str);

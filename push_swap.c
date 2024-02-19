@@ -6,7 +6,7 @@
 /*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 16:54:43 by aalshafy          #+#    #+#             */
-/*   Updated: 2024/02/18 17:03:41 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:29:05 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ int	main(int ac, char *av[])
 	if (stack_len(stack_a) == 2)
 	{
 		sa(&stack_a, 1);
-		ps_free_stack(stack_a);
-		return (0);
+		return (ps_free_stack(stack_a), 0);
 	}
 	ps_init_ps(&stack_a);
 }

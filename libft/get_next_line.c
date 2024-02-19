@@ -6,7 +6,7 @@
 /*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 12:05:47 by aalshafy          #+#    #+#             */
-/*   Updated: 2024/02/05 17:20:09 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:18:23 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*get_next_line(int fd)
 {
 	char		*buffer;
-	char			*line;
-	int				j;
+	char		*line;
+	int			j;
 
 	j = 1;
 	if (fd < 0 || BUFFER_SIZE <= 0)
@@ -24,8 +24,7 @@ char	*get_next_line(int fd)
 	line = ft_calloc(sizeof(char), 1);
 	if (!line)
 		return (NULL);
-	// if (!buffer)
-		buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
+	buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 	if (!buffer)
 		return (free(line), NULL);
 	line = check(buffer, line, fd, &j);

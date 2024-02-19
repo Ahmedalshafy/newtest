@@ -6,7 +6,7 @@
 /*   By: aalshafy <aalshafy@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 16:54:43 by aalshafy          #+#    #+#             */
-/*   Updated: 2024/02/18 17:55:39 by aalshafy         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:14:13 by aalshafy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ps_validate(char *str)
 	return (1);
 }
 
-int ps_check_dup(t_stack *stack)
+int	ps_check_dup(t_stack *stack)
 {
 	t_stack	*tmp;
 	t_stack	*tmp2;
@@ -80,7 +80,6 @@ int ps_check_dup(t_stack *stack)
 	return (1);
 }
 
-
 char	*ps_strjoin(char *s1, char *s2)
 {
 	char	*new;
@@ -99,26 +98,11 @@ char	*ps_strjoin(char *s1, char *s2)
 	i = -1;
 	j = -1;
 	while (s1[++i] != 0)
-	{
-		if (s1[i] == ' ' && (s1[i + 1] == ' ' || s1[i + 1] == '\0'))
-			continue;
-		else
-			new[++j] = s1[i];
-	}
+		ps_cpy_char(s1[i], s1[i + 1], new, ++j);
 	new[++j] = ' ';
 	i = -1;
 	while (s2[++i] != 0)
-	{
-		if (s2[i] == ' ' && (s2[i + 1] == ' ' || s2[i + 1] == '\0'))
-			continue;
-		else
-			new[++j] = s2[i];
-	}
+		ps_cpy_char(s2[i], s2[i + 1], new, ++j);
 	new[++j] = '\0';
-	free(s1);
-	return (new);
+	return (free(s1), new);
 }
-
-
-
-	
