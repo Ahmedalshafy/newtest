@@ -14,7 +14,7 @@
 
 char	*get_next_line(int fd)
 {
-	static char		*buffer;
+	char		*buffer;
 	char			*line;
 	int				j;
 
@@ -24,7 +24,7 @@ char	*get_next_line(int fd)
 	line = ft_calloc(sizeof(char), 1);
 	if (!line)
 		return (NULL);
-	if (!buffer)
+	// if (!buffer)
 		buffer = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 	if (!buffer)
 		return (free(line), NULL);
@@ -32,10 +32,10 @@ char	*get_next_line(int fd)
 	if (line == NULL)
 		return (free(buffer), buffer = NULL, free(line), NULL);
 	if (j <= 0 && buffer[0] != 0 && buffer != NULL)
-		return (line);
+		return (free(buffer), line);
 	if (j <= 0 && buffer[0] == 0)
 		return (free(buffer), buffer = NULL, line);
-	return (line);
+	return (free(buffer), line);
 }
 
 char	*check(char *buffer, char *line, int fd, int *j)

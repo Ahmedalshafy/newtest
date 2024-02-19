@@ -15,10 +15,7 @@
 int	main(int ac, char *av[])
 {
 	char	**args;
-	int		*array;
 	t_stack	*stack_a;
-	t_stack	*stack_b;
-	int		i;
 
 	args = ps_parsing(ac, av);
 	if (!args)
@@ -84,6 +81,7 @@ void	ps_excute_ins_2(t_stack **stack_a, t_stack **stack_b, char *line)
 	else
 	{
 		free(line);
+		ps_free_stack(*stack_a);
 		exit_error();
 	}
 }

@@ -15,11 +15,12 @@
 NAME = push_swap
 BONUS = checker
 CFILES = 	ps_main_sort.c ps_stack_utils.c ps_swap.c ps_push.c push_swap.c \
-			ps_prepare.c ps_parsing_1.c ps_parsing_2.c ps_last_cases.c \
+			ps_prepare.c ps_parsing_1.c ps_parsing_2.c ps_parsing_3.c \
 			ps_rotate.c ps_rev_rotate.c ps_utils.c ps_utils_a.c ps_utils_b.c \
-			ps_sort_3_a.c ps_sort_3_b.c ps_less_9.c ps_less_9_2.c
+			ps_sort_3_a.c ps_sort_3_b.c ps_less_9.c ps_less_9_2.c ps_last_cases.c 
 BONUS_FILES = ps_main_checker.c ps_parsing_1.c ps_parsing_2.c ps_stack_utils.c \
-			ps_swap.c ps_push.c ps_rotate.c ps_rev_rotate.c ps_utils.c ps_prepare.c
+			ps_swap.c ps_push.c ps_rotate.c ps_rev_rotate.c ps_utils.c ps_prepare.c \
+			ps_parsing_3.c
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
