@@ -98,11 +98,11 @@ char	*ps_strjoin(char *s1, char *s2)
 	i = -1;
 	j = -1;
 	while (s1[++i] != 0)
-		ps_cpy_char(s1[i], s1[i + 1], new, ++j);
+		ps_cpy_char(s1[i], s1[i + 1], new, &j);
 	new[++j] = ' ';
 	i = -1;
 	while (s2[++i] != 0)
-		ps_cpy_char(s2[i], s2[i + 1], new, ++j);
+		ps_cpy_char(s2[i], s2[i + 1], new, &j);
 	new[++j] = '\0';
 	return (free(s1), new);
 }

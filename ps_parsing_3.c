@@ -66,10 +66,10 @@ int	ft_strcmp(char *s1, char *s2)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-void	*ps_cpy_char(char s1, char s2, char *dest, int j)
+void	ps_cpy_char(char s1, char s2, char *dest, int *j)
 {
 	if (s1 == ' ' && (s2 == ' ' || s2 == '\0'))
 		return ;
 	else
-		dest[j] = s1;
+		dest[++(*j)] = s1;
 }
